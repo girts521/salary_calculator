@@ -41,15 +41,14 @@ $('.btn').click(() => {
         //if socTax = 0 then 50$ - rich tax for every care person?????!!!!!!1
       let  netto = ((salary - socTax) - incTax) - richTax
         console.log(`netto: ${netto}`)
+        $('.result').text((Math.round(netto * 100) / 100).toFixed(2))
     }else{
         netto = (salary - socTax) - incTax
-     
+        $('.result').text((Math.round(netto * 100) / 100).toFixed(2))
     }
     console.log(`salary = ${salary}, socTax = ${socTax}, carePpl = ${carePpl}, incTax = ${incTax} `)
-    console.log(netto)
-    $('.result').text((Math.round(netto * 100) / 100).toFixed(2))
-    
 
+    
 }
 
 })
