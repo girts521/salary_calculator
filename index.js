@@ -5,7 +5,6 @@ const changeColor = () => {
     $('body').css('background-color', coolors[num])
 }
 
-
 const socTax = 0.105;
 const carePplNum = () => {
     if (!$('#num').val()) {
@@ -54,7 +53,6 @@ const incTaxCalc = (salary, socTax, carePpl) => {
     } else {
         return (1667 - (socTax + carePplTax(carePpl))) * 0.2
     }
-
 }
 
 const carePplTax = (ppl) => Math.abs(ppl * 250)
